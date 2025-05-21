@@ -1,16 +1,12 @@
 # tarefas
 
-A new Flutter project.
+aplicação Flutter que gerencia uma lista de tarefas com interfaces para criação, edição, exclusão e listagem de tarefas. As tarefas armazenadas em memória, sem uso de banco de dados.
+
+Cada tarefa consiste de:
+Nome
+Data e hora
+Geolocalização, em que o usuário pode indicar o local da tarefa, inclusive capturando, via GPS do dispositivo, o local do usuário.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+prints do funcionamento da aplicação no arquivo RodrigoAlberto_DesenvolvimentoMobilecomFlutter-25E2_2.pdf
