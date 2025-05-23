@@ -49,7 +49,7 @@ class _FormTaskPageState extends State<FormTaskPage> {
             ? '${placeMarks[0].street ?? ''} - ${placeMarks[0].locality ?? ''}'
             : null;
 
-    setState(() {});
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
