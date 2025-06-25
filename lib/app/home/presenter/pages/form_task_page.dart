@@ -1,3 +1,4 @@
+import 'package:design_system/componentes/text/ds_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:geocoding/geocoding.dart';
@@ -55,7 +56,7 @@ class _FormTaskPageState extends State<FormTaskPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('${widget.task != null ? 'Editar' : 'Criar'} Tarefa')),
+      appBar: AppBar(title: DsText('${widget.task != null ? 'Editar' : 'Criar'} Tarefa')),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 8),
@@ -91,14 +92,14 @@ class _FormTaskPageState extends State<FormTaskPage> {
                   onChanged: (value) {},
                 ),
                 SizedBox(height: 36),
-                Row(children: [Text('Localização selecionada:')]),
+                Row(children: [DsText('Localização selecionada:')]),
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       children: [
                         Expanded(
-                          child: Text('Localização: ${_selectedLocation ?? 'Desconhecido'}'),
+                          child: DsText('Localização: ${_selectedLocation ?? 'Desconhecido'}'),
                         ),
                       ],
                     ),
@@ -123,7 +124,7 @@ class _FormTaskPageState extends State<FormTaskPage> {
                       Modular.to.pop();
                     }
                   },
-                  child: const Text('Salvar'),
+                  child: const DsText('Salvar'),
                 ),
               ],
             ),

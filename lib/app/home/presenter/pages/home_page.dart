@@ -1,3 +1,5 @@
+import 'package:design_system/componentes/text/ds_text.dart';
+import 'package:design_system/componentes/text/ds_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:tarefas/app/home/models/task_model.dart';
@@ -21,7 +23,7 @@ class _HomePageState extends State<HomePage> {
     isLandescape = mediaQuery.orientation == Orientation.landscape;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Lista de Tarefas')),
+      appBar: AppBar(title: const DsText('Lista de Tarefas', style: DsTextStyle.bigTitle,)),
       body: Padding(
         padding: EdgeInsetsGeometry.only(bottom: mediaQuery.padding.bottom),
         child: ValueListenableBuilder<List<TaskModel>>(
@@ -40,10 +42,10 @@ class _HomePageState extends State<HomePage> {
                           spacing: 4,
                           children: [
                             const Icon(Icons.task),
-                            Expanded(child: Text(e.title,maxLines: 1,overflow: TextOverflow.ellipsis,)),
+                            Expanded(child: DsText(e.title,maxLines: 1,overflow: TextOverflow.ellipsis,)),
                           ],
                         ),
-                        Expanded(child: Text(e.description ?? '',maxLines: 3,overflow: TextOverflow.ellipsis,)),
+                        Expanded(child: DsText(e.description ?? '',maxLines: 3,overflow: TextOverflow.ellipsis,)),
                         Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -73,8 +75,8 @@ class _HomePageState extends State<HomePage> {
                   final task = tasks[index];
                   return ListTile(
                     leading: const Icon(Icons.task),
-                    title: Text(task.title),
-                    subtitle: Text(task.description ?? ''),
+                    title: DsText(task.title),
+                    subtitle: DsText(task.description ?? ''),
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
