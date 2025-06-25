@@ -20,7 +20,5 @@ class HomeController {
     tasks.notifyListeners();
   }
 
-  Future<void> getTemperature(GeoPointModel geoPoint) async {
-    
-  }
+
 }
