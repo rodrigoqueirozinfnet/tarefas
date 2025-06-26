@@ -1,5 +1,4 @@
 import 'package:flutter/foundation.dart';
-import 'package:tarefas/app/home/models/geo_point_model.dart';
 import 'package:tarefas/app/home/models/task_model.dart';
 
 class HomeController {
@@ -19,6 +18,4 @@ class HomeController {
     tasks.value[index] = task;
     tasks.notifyListeners();
   }
-
-
 }
